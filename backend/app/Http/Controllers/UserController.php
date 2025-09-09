@@ -8,12 +8,7 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    /**
-     * Store a newly created user in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         // Define validation rules
@@ -40,12 +35,7 @@ class UserController extends Controller
         return response()->json($user, 201);
     }
 
-    /**
-     * Display a listing of the users by role.
-     *
-     * @param  string  $role
-     * @return \Illuminate\Http\Response
-     */
+   
     public function indexByRole($role)
     {
         $users = User::whereJsonContains('roles', $role)->get();
