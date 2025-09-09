@@ -1,0 +1,239 @@
+/* Modern Reset & Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+
+  /* Use Flexbox to center the main content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* App Card - The main container */
+.bg-white {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px; /* Increased max-width for a bigger layout */
+  padding: 3rem; /* Increased padding to match the bigger size */
+  animation: fadeIn 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem; /* Increased font size for the main title */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem; /* Adjusted margin for better spacing */
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 2rem; /* Increased font size for section titles */
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #34495e;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem; /* Adjusted padding */
+  width: 100%;
+}
+
+/* Navigation Buttons */
+.flex.justify-center.space-x-4.mb-8 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Increased gap between buttons */
+  margin-bottom: 2.5rem;
+}
+
+button {
+  padding: 0.85rem 1.8rem; /* Increased button padding */
+  border-radius: 10px; /* Slightly more rounded buttons */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+/* Active Nav Button */
+.bg-blue-600.text-white {
+  background-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Inactive Nav Button */
+.bg-gray-200.text-gray-700 {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+
+.hover\:bg-gray-300:hover {
+  background-color: #dee2e6;
+  color: #495057;
+}
+
+/* Main Content Views (Form and List) */
+.bg-white.p-8.rounded-lg.shadow-xl.w-full.max-w-md {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+/* Form Group */
+.space-y-4 > div {
+  margin-bottom: 1.25rem; /* Increased space between form fields */
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 1rem; /* Increased label font size */
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs and Select */
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 1rem 1.25rem; /* Increased padding */
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem; /* Increased input font size */
+  color: #495057;
+}
+
+input::placeholder {
+  color: #adb5bd;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25); /* Adjusted glow size */
+}
+
+select[multiple] {
+  min-height: 150px; /* Increased height for multiple select */
+  resize: vertical;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem 2rem; /* Increased padding */
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #28a745;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #218838;
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+button[type="submit"]:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Error Message */
+.text-red-500 {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  padding-left: 0.2rem;
+}
+
+/* User List */
+.list-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px; /* Adjusted max-width */
+  padding: 2.5rem;
+}
+
+.list-container button {
+  background-color: #17a2b8;
+  box-shadow: 0 4px 10px rgba(23, 162, 184, 0.2);
+  margin-bottom: 2rem; /* Increased margin */
+  padding: 0.85rem 1.8rem;
+}
+
+.list-container button:hover {
+  background-color: #138496;
+  box-shadow: 0 6px 15px rgba(23, 162, 184, 0.3);
+}
+
+.space-y-4 > li {
+  margin-bottom: 1.25rem;
+}
+
+.list-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem; /* Increased padding for list items */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.list-item div {
+  margin-bottom: 0.3rem;
+}
+
+.list-item .font-medium {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.15rem; /* Increased font size */
+}
+
+.list-item .text-sm {
+  font-size: 0.95rem; /* Increased font size */
+  color: #6c757d;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+
+.text-center.text-gray-500 {
+  color: #6c757d;
+  font-style: italic;
+  padding: 1rem;
+}
